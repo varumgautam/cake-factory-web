@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///D:/java_script/function%20js/task_function.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .button{
+            width:80%;
+            background-color:whitesmoke;
+            height: 200px;
+            text-align: center;
+            margin: auto;
+        }
+        .button ul{display: flex;justify-content: center;gap: 20px;}
+        .button ul li{
+                     width: 200px;
+                     height: 100px;
+                     border: 2px solid black;
+                     list-style:none;
+
+        }
+        .bg1{background-color: red;}
+        .bg2{background-color:yellow;}
+        .bg3{background-color: blue;}
+        .row{display:flex; justify-content: center; gap: 20px;}
+        #red{width: 150px;height: 100px;  border: 2px solid; margin: 1vh 50px; background-color: red;display: none;}
+        #yellow{width: 150px;height: 100px; border: 2px solid; margin: 1vh 50px; background-color: yellow;display: none;}
+        #blue{width: 150px;height: 100px; border: 2px solid;margin: 1vh 50px; background-color: blue;display: none;}
+        
+    </style>
+</head>
+<body>
+    <div class="button">
+    <ul>
+        <li onclick="tab(&#39;all&#39;)">ALL</li>
+        <li class="bg1" onclick="tab(&#39;red&#39;)">RED</li>
+        <li class="bg2" onclick="tab(&#39;yellow&#39;)">Yellow</li>
+        <li class="bg3" onclick="tab(&#39;blue&#39;)">BLUE</li>
+    </ul>
+    </div>
+    <div class="row">
+        <div id="red" style="display: none;"></div>
+        <div id="red"></div>
+        <div id="red"></div>
+        </div>
+        <div class="row">
+        <div id="yellow" style="display: none;"></div>
+        <div id="yellow"></div>
+        <div id="yellow"></div>
+        </div>
+        <div class="row">
+        <div id="blue" style="display: block;"></div>
+        <div id="blue"></div>
+        <div id="blue"></div>
+    </div>
+    <script>
+        function tab(tdata){
+            let arr=["red","red","red","yellow"]
+            for(let i=0;i<=3;i++)
+            if(tdata=="red"){
+                document.getElementById('red').style.display='block';
+                document.getElementById('yellow').style.display='none';
+                document.getElementById('blue').style.display='none';
+            }
+            else if(tdata=="yellow"){
+                document.getElementById('red').style.display='none';
+                document.getElementById('yellow').style.display='block';
+                document.getElementById('blue').style.display='none';
+            }
+            else if(tdata=="blue"){
+                document.getElementById('red').style.display='none';
+                document.getElementById('yellow').style.display='none';
+                document.getElementById('blue').style.display='block';
+            }
+            else{
+                document.getElementById('red').style.display='block';
+                document.getElementById('yellow').style.display='block';
+                document.getElementById('blue').style.display='block';
+            }
+        }
+    </script>
+
+</body></html>
